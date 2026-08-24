@@ -1,0 +1,7 @@
+# Отключает проверку GitHub artifact attestations в mise (внутренний
+# сборщик Nixpacks на Railway). Без этого сборка иногда падает на шаге
+# "verify GitHub artifact attestations" при установке Python — баг/нестабильность
+# самого mise, к коду бота отношения не имеет.
+[variables]
+MISE_PYTHON_GITHUB_ATTESTATIONS = "false"
+MISE_GITHUB_ATTESTATIONS = "false"
